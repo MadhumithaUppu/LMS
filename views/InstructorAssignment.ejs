@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Assignment</title>
+        <script src="https://unpkg.com/feather-icons"></script>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        
+        <h1>Assignment</h1>
+        <a href="AssignmentForm"><button type="button" class="btn">Add</button></a>
+        
+        <div class="main">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Assignment id</th>
+                <th scope="col">Due</th>
+                <th scope="col">Description</th>
+                <th scope="col">Max Score</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+                <% data.forEach(function(data){ %>
+                    <tr>
+                      <td><%= data.assignment_id%></td>
+                      <td><%= data.due%></td>
+                      <td><%= data.a_description%></td>
+                      <td><%= data.max_score%></td>
+                      <td><a href="/AssignmentDelete/<%= data.assignment_id %>"><i data-feather="trash"></i></a></td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+          </table>
+        </div>
+
+          <script>
+            feather.replace()
+          </script>
+        <script src="" async defer></script>
+    </body>
+</html>
